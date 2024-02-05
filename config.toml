@@ -1,0 +1,160 @@
+baselink = "https://www.palm,pantrypoints.com"
+metaDataFormat = "yaml"
+title = "Palm -- Know Your Future"
+theme = "blist"
+
+DefaultContentLanguage = "en"
+DefaultContentLanguageInSubdir = false
+
+enableEmoji = true
+paginate = 12
+
+[languages]
+  [languages.en]
+    contentDir = "content/en" #English
+    weight = 1
+    languageName = "English"
+
+    # [[languages.en.menu.main]]
+    #     name = "Send"
+    #     # name = "/icons/swap.png"
+    #     url = "trisactions"
+    #     weight = 1
+
+
+
+
+    [languages.en.params]
+      main = "Know your"
+      sub = "Palm is a palmistry system based on 15 years of experience"
+      banner = "/photos/holdhands.jpg"
+      wow = "Future"
+      youtube = "28Wxng1UU70"
+
+    [languages.en.params.cta]
+      title = ""
+    [languages.en.params.cta.buttons.a]
+      link = "#form"
+      text = "Fill up the Form"
+      color = ""
+    [languages.en.params.cta.buttons.b]
+      link = "https://www.superphysics.org/research/benham/palmistry/part-2/"
+      text = "Check out the science"
+      color = ""
+
+    [languages.en.params.req]
+      title = "The 7 distinct types of people were first created, each with strong qualities, aptitudes, virtues, and faults, as well as peculiarities of health and character. (William Benham)"
+      # avatar = "/avatars/smith.png"
+    [languages.en.params.form]
+      title = "Enter Your Details Below"
+      # avatar = "/avatars/smith.png"
+
+
+[params]
+  logo = "/icons/pantry.png"
+  
+  # Enable the darkmode toggle in header
+  darkModeToggle = true
+  
+  # Enable search in header
+  enableSearch = true
+
+  # Option to customize the search parameters of a page
+  # Below are the supported options; Note that including entire content
+  # may slowdown the loading of search results
+  # Title of page is included by default
+  # searchKeys = [
+  #   "title",
+  #   "link",
+  #   "description"
+  # ]
+  searchKeys = [
+    "tags",
+    "date",
+    "categories",
+    "summary",
+    "content",
+    "link",
+    "author"
+  ]
+
+  # Custom copyright - optional
+  copyright = "Copyright © 2024 | <a href='/company/'>Pantrypoints Technologies</a> | Based on <a href='https://www.superphysics.org'>Superphysics</a>"
+  favicon = "/icons/pantry50.png"
+
+  ascentColor = "bg-blue-100"
+
+  # The page bundle that is shown on the front page
+  frontBundle = "blog"
+
+  # Used to hide the post metadata such as posted date, reading time and word count
+  # Can be used at site level or page level
+  hideMeta = false
+
+  # To hide "Other languages" option if the post is available in multiple languages
+  # Can be used at site level or page level
+  hideOtherLanguages = false
+
+  # Add support for Table of contents
+  # Can be added to a page level also in markdown frontmatter
+  toc = true
+
+
+  hidePageThumbnail = false
+
+# Comments system
+[params.comments]
+  system = "giscus"
+
+  repo="jundalisay/superblist"
+  repo-id="R_kgDOKk--Tw"
+  category="General"
+  category-id="DIC_kwDOKk--T84CacDf"
+  mapping="pathname"
+  strict="0"
+  reactions-enabled="1"
+  emit-metadata="0"
+  input-position="bottom"
+  theme="preferred_color_scheme"
+  lang="en"
+  crossorigin="anonymous"
+
+  # Options for utterances, exclude hyphens
+  # repo = ""
+  # issueterm = ""
+  # theme = ""
+
+[params.homepage.social]
+  # Global params common for both languages
+  # title = "Follow or Support Us!"
+  # description = "We're building a new science and new systems for a better reality"
+
+  [[params.homepage.social.icons]]
+    website = "twitter"
+    url = "https://twitter.com/pantrypoints"
+  [[params.homepage.social.icons]]
+    website = "youtube"
+    url = "https://www.youtube.com/@pantrypoints"
+  # [[params.homepage.social.icons]]
+  #   website = "instagram"
+  #   link = "https://instagram.com"
+  [[params.homepage.social.icons]]
+    website = "facebook"
+    url = "https://www.facebook.com/pantrypoints/"
+  # [[params.homepage.social.icons]]
+  #   website = "behance"
+  #   link = "https://behance.net"
+
+[build]
+  writeStats = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# syntax highlight settings
+[markup]
+  [markup.highlight]
+    style = "dracula"
+  [markup.goldmark.renderer]
+    # Enable to include inline HTML
+    unsafe = true
